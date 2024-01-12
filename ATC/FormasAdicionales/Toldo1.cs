@@ -16,13 +16,13 @@ namespace ATC.FormasAdicionales
         {
             InitializeComponent();
 
-            //cbxServicio.Checked = Properties.Settings.Default.CheckBoxEstado;
+            cbxServicio.Checked = Properties.Settings.Default.CheckBoxEstado;
         }
 
         private void Toldo1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Properties.Settings.Default.CheckBoxEstado = cbxServicio.Checked;
-            //Properties.Settings.Default.Save();
+            Properties.Settings.Default.CheckBoxEstado = cbxServicio.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }

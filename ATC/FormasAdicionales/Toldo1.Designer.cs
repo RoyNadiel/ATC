@@ -133,7 +133,6 @@ namespace ATC.FormasAdicionales
             this.Controls.Add(this.lblSnack);
             this.Controls.Add(this.lblCocteles);
             this.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Toldo1";
             this.Text = "Toldo1";

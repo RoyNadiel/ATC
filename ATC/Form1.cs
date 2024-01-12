@@ -20,6 +20,7 @@ namespace ATC
             InitializeComponent();
             Properties.Settings.Default.Save();
         }
+
         public void AbrirForm(Form formurlario)
         {
             if (forms != null && !forms.IsDisposed)
@@ -36,21 +37,21 @@ namespace ATC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Toldos TD = new Toldos();
-            AbrirForm(TD);
+            //Toldos TD = new Toldos();
+            AbrirForm(new Toldos());
         }       
 
         private void btnToldos_Click(object sender, EventArgs e)
         {
-            Toldos TD = new Toldos();
-            AbrirForm(TD);
+            //Toldos TD = new Toldos();
+            AbrirForm(new Toldos());
             //TD.ShowDialog();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            Ventas VT = new Ventas();
-            AbrirForm(VT);
+            //Ventas VT = new Ventas();
+            AbrirForm(new Ventas());
             //VT.ShowDialog();
         }    
         

@@ -13,32 +13,22 @@ namespace ATC
 {
     public partial class Toldos : Form
     {
-        private Form forms;
-        private object panelContenedor;
+        private Form1 FM1;
 
         public Toldos()
         {
             InitializeComponent();
         }
+        public Toldos(Form1 form1)
+        {
+            FM1 = form1;
+        }
 
-        //public void AbrirForm(Form formurlario)
-        //{
-        //    if (forms != null && !forms.IsDisposed)
-        //    {
-        //        forms.Close();
-        //    }
-        //    forms = formurlario;
-        //    forms.TopLevel = false;
-        //    forms.FormBorderStyle = FormBorderStyle.None;
-        //    forms.Dock = DockStyle.None;
-        //    panelContenedor.Controls.Add(forms);
-        //    forms.Show();
-        //}
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    Toldo1 TD = new Toldo1();
-        //    AbrirForm(TD);
-        //}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Toldo1 TD1 = new Toldo1();
+            //FM1.AbrirForm(new Toldo1());
+            TD1.ShowDialog();
+        }
     }
 }
