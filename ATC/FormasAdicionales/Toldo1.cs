@@ -19,10 +19,11 @@ namespace ATC.FormasAdicionales
             cbxServicio.Checked = Properties.Settings.Default.CheckBoxEstado;
         }
 
-        private void Toldo1_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.CheckBoxEstado = cbxServicio.Checked;
             Properties.Settings.Default.Save();
+            Close();
         }
     }
 }

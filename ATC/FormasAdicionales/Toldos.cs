@@ -1,4 +1,4 @@
-﻿using ATC.FormasAdicionales;
+﻿ using ATC.FormasAdicionales;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,6 @@ namespace ATC
     public partial class Toldos : Form
     {
         private Form1 FM1;
-
         public Toldos()
         {
             InitializeComponent();
@@ -26,9 +25,9 @@ namespace ATC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Toldo1 TD1 = new Toldo1();
-            //FM1.AbrirForm(new Toldo1());
+            Toldo1 TD1 = new Toldo1();           
             TD1.ShowDialog();
+            //FM1.AbrirForm(new Toldo1());
         }
     }
 }

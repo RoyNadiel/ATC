@@ -108,6 +108,7 @@ namespace ATC.FormasAdicionales
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -136,7 +137,6 @@ namespace ATC.FormasAdicionales
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Toldo1";
             this.Text = "Toldo1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Toldo1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
