@@ -1,7 +1,7 @@
 ﻿
 namespace ATC
 {
-    partial class Form1
+    partial class FormPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -32,6 +32,7 @@ namespace ATC
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.btnToldos = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
+            this.btnResetearVentas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panelContenedor
@@ -61,17 +62,31 @@ namespace ATC
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // Form1
+            // btnResetearVentas
+            // 
+            this.btnResetearVentas.Location = new System.Drawing.Point(12, 303);
+            this.btnResetearVentas.Name = "btnResetearVentas";
+            this.btnResetearVentas.Size = new System.Drawing.Size(78, 36);
+            this.btnResetearVentas.TabIndex = 2;
+            this.btnResetearVentas.Text = "Resetear \r\nVentas";
+            this.btnResetearVentas.UseVisualStyleBackColor = true;
+            this.btnResetearVentas.Click += new System.EventHandler(this.btnResetear_Click);
+            // 
+            // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(846, 416);
+            this.Controls.Add(this.btnResetearVentas);
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.btnToldos);
             this.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Name = "FormPrincipal";
+            this.Text = "FormPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -82,6 +97,7 @@ namespace ATC
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnToldos;
         private System.Windows.Forms.Button btnVentas;
+        private System.Windows.Forms.Button btnResetearVentas;
     }
 }
 

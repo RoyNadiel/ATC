@@ -20,16 +20,29 @@ namespace ATC
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string rutaArchivo = @"C:\Users\Roy Nadiel\Documents\" + lblToldo.Text.ToString() + txtbToldo.Text.ToString() + ".txt";
+            string rutaDirectory = @"C:\Users\Roy Nadiel\Documents\TOLDOS\";
 
-            if (File.Exists(rutaArchivo))
+            Directory.CreateDirectory(rutaDirectory);
+
+            string rutaArchivo = rutaDirectory + "Toldo #" + txtbToldo.Text.ToString() + ".txt";
+
+            if (int.Parse(txtbToldo.Text) <= 0)
             {
-                rutaArchivo = @"C:\Users\Roy Nadiel\Documents\" + lblToldo.Text.ToString() + txtbToldo.Text.ToString() + ".txt";
+                MessageBox.Show("Ingrese el numero de Toldo");
             }
+            else
+            {
+                if (File.Exists(rutaArchivo))
+                {
+                    rutaArchivo = rutaDirectory + "Toldo #" + txtbToldo.Text.ToString() + ".txt";
+                }
+            }         
 
-            using (StreamWriter sw = new StreamWriter(@rutaArchivo))
-            {                
-                sw.WriteLine(txtbProducto.Text);
+            using (StreamWriter sw = new StreamWriter(@rutaArchivo, true))
+            {
+                sw.WriteLine("→ " + txtbProducto.Text);
+                txtbProducto.Text = "";
+                txtbToldo.Text = "";
             }
         }
     }

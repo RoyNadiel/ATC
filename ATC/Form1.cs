@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,14 +12,15 @@ using System.Windows.Forms;
 
 namespace ATC
 {
-    public partial class Form1 : Form
+    public partial class FormPrincipal : Form
     {
         private Form forms;
-        
-        public Form1()
+
+        public EventHandler Toldo1_Load { get; }
+
+        public FormPrincipal()
         {
             InitializeComponent();
-            Properties.Settings.Default.Save();
         }
 
         public void AbrirForm(Form formurlario)
@@ -37,9 +39,8 @@ namespace ATC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Toldos TD = new Toldos();
             AbrirForm(new Toldos());
-        }       
+        }
 
         private void btnToldos_Click(object sender, EventArgs e)
         {
@@ -53,7 +54,17 @@ namespace ATC
             //Ventas VT = new Ventas();
             AbrirForm(new Ventas());
             //VT.ShowDialog();
-        }    
-        
+        }
+
+        private void btnResetear_Click(object sender, EventArgs e)
+        {
+            string rutaDirectory = @"C:\Users\Roy Nadiel\Documents\TOLDOS\";
+
+            if (Directory.Exists(rutaDirectory))
+            {
+                Directory.Delete(rutaDirectory, true);
+                MessageBox.Show("Reset Correcto");
+            }
+        }
     }
 }

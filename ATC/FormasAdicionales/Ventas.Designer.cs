@@ -42,7 +42,7 @@ namespace ATC
             this.txtbProducto.Location = new System.Drawing.Point(86, 57);
             this.txtbProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtbProducto.Name = "txtbProducto";
-            this.txtbProducto.Size = new System.Drawing.Size(188, 22);
+            this.txtbProducto.Size = new System.Drawing.Size(599, 22);
             this.txtbProducto.TabIndex = 0;
             // 
             // lblProducto

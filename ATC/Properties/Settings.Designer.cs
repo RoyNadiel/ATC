@@ -35,6 +35,6 @@ namespace ATC.Properties {
             }
         }
 
-        public bool CheckBoxEstado { get; internal set; }
+        public bool CheckBoxState { get; internal set; }
     }
 }

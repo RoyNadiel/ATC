@@ -13,12 +13,12 @@ namespace ATC
 {
     public partial class Toldos : Form
     {
-        private Form1 FM1;
+        private FormPrincipal FM1;
         public Toldos()
         {
             InitializeComponent();
         }
-        public Toldos(Form1 form1)
+        public Toldos(FormPrincipal form1)
         {
             FM1 = form1;
         }

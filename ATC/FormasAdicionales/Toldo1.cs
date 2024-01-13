@@ -15,15 +15,18 @@ namespace ATC.FormasAdicionales
         public Toldo1()
         {
             InitializeComponent();
-
-            cbxServicio.Checked = Properties.Settings.Default.CheckBoxEstado;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.CheckBoxEstado = cbxServicio.Checked;
+            Properties.Settings.Default.CheckBoxState = cbxServicio.Checked;
             Properties.Settings.Default.Save();
             Close();
+        }
+
+        private void Toldo1_Load(object sender, EventArgs e)
+        {
+            cbxServicio.Checked = Properties.Settings.Default.CheckBoxState;
         }
     }
 }

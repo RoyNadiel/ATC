@@ -137,6 +137,7 @@ namespace ATC.FormasAdicionales
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Toldo1";
             this.Text = "Toldo1";
+            this.Load += new System.EventHandler(this.Toldo1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
