@@ -13,21 +13,17 @@ namespace ATC
 {
     public partial class Toldos : Form
     {
-        private FormPrincipal FM1;
+        private Principal FM1;
         public Toldos()
         {
             InitializeComponent();
         }
-        public Toldos(FormPrincipal form1)
-        {
-            FM1 = form1;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Toldo1 TD1 = new Toldo1();           
             TD1.ShowDialog();
             //FM1.AbrirForm(new Toldo1());
         }
+
     }
 }
