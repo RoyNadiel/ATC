@@ -28,33 +28,5 @@ namespace ATC.FormasAdicionales
         {
             cbxServicio.Checked = Properties.Settings.Default.CheckBoxState;
         }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btn_minimzar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        int m, mx, my;
-        private void topPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            m = 1;
-            mx = e.X;
-            my = e.Y;
-        }
-
-        private void topPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (m == 1) this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-        }
-
-        private void topPanel_MouseUp(object sender, MouseEventArgs e)
-        {
-            m = 0;
-        }
     }
 }
